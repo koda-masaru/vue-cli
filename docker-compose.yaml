@@ -1,0 +1,11 @@
+version: '3.6'
+
+services:
+  vue-cli:
+    image: vue-cli
+    command: bash -c "vue -v"
+    working_dir: $PWD
+    volumes:
+      - ./data:$PWD:cached
+    build:
+      context: .
